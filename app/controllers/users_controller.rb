@@ -41,6 +41,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    @title = "All users"
+    @users = User.all
+  end
+
+  def show
+    @user = User.find(params[:id])
+    @title = @user.name
+  end
+  
   private
     
     def authenticate
