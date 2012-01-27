@@ -240,3 +240,42 @@ form.new_micropost textarea {
     height: 4em;
     margin-bottom: 0;
 }
+
+/* text_counter.js styling */
+
+/* The position of the parent is made relative so that absolutetly positioned
+   elements take their location from this */
+.charcounter {
+    position: relative;
+    width: 374px;
+    height: 65px;
+}
+
+/* Make both the counter div and the textarea inside the div bigger and show
+   up on top of each other by placing them on top left corner with absolute
+   positioning. */
+.charcounter * {
+    width: 374px;
+    height: 65px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+}
+
+/* Modify the counter div's font to show up in the front with bigger letters */
+.charcounter div {
+    color: silver;
+    font-family: Arial;
+    font-size: 400%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80px;
+    vertical-align: middle;
+     opacity: 0.5;
+}
+
+/* Finally, we want the counter to change color when it's negative. */
+.charcounter div.negative {
+    color: red;
+}
