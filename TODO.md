@@ -1,5 +1,24 @@
 # Tasks to be accomplished in future revisions.
 
+* Use `session` instead of `cookies` so that users are automatically signed out
+when they close their browsers. *Hint:* Do a Google search on "Rails session".
+* **(advanced)** Some sites use secure HTTP (HTTPS) for their signin pages.
+Search online to learn how to use HTTPS in Rails, and then secure the Sessions
+controller `new` and `create` actions. *Extra challenge:* Write tests for the
+HTTPS functionality. (*Note:* I suggest doing this exercise only in development,
+which does not require obtaining an SSL certificate or setting up the SSL
+encryption machinery. Actually deploying an SSL-enabled site is *much* more
+difficult.)
+* Arrange for the Gravatar "change" link in `app/views/users/edit.html.erb` to
+open in a new window (or tab). Hint: Search the web; you should find one
+particularly robust method involving something called `_blank`.
+* Signed-in users have no reason to access the `new` and `create` actions in the
+Users controller. Arrange for such users to be redirected to the root url if
+they do try to hit those pages.
+* Add tests to check that the delete links in `app/views/users/_user.html.erb`
+appear for admins but not for normal users.
+* Modify the `destroy` action to prevent admin users from destroying themselves.
+(Write a test first.)
 * Add tests for the sidebar micropost counts (including proper pluralization).
 * __(mainly for designers)__ Modify the microposts listing to use an ordered
 list instead of a table. (Note: this is how Twitter displays its status
