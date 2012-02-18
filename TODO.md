@@ -36,3 +36,11 @@ corresponding view.)
 helper defined in `app/helpers/microposts_helper.rb`. (Note the use of
 the `raw` method to prevent Rails from escaping the resulting HTML, together
 with the `sanitize` method needed to prevent cross-site scripting.)
+* Add @replies.
+* Add DM's.
+* Add follower notifications.
+* Add password reset capabilities.
+* Add signup confirmation.
+* Add RSS feed.
+* Add a REST API.
+* Add search.
